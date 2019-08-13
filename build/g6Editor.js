@@ -23435,15 +23435,28 @@
                 attrs: i
               })
           }(u.isNil(e.label) ? "新建分组" : e.label, n, O, E),
-            function(t, e, n, i) {
-              var o = e.addShape("path", {
+            function(model, e, n, i, util, defaultIcon) {
+            var o;
+            if(model.iconUrl){
+              o = e.addShape('image', {
+                attrs: {
+                  img: model.iconUrl,
+                  x: n + 8,
+                  y: i + 8,
+                  width: 20,
+                  height: 20
+                }
+              })
+            }else{
+              o = e.addShape("path", {
                 attrs: r({
-                  path: t
+                  path: util.isNil(model.icon) ? defaultIcon : model.icon,
                 }, l)
               })
-                , a = o.getBBox();
+              a = o.getBBox();
               o.translate(n - a.minX + w, i - a.minY + _)
-            }(u.isNil(e.icon) ? s : e.icon, n, O, E),
+            }
+            }(e, n, O, E, u, s),
             (function(t, e, n, i, o) {
               var a;
               if (t) {
