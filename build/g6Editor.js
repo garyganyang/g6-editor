@@ -25104,6 +25104,7 @@
           n.behaviourOn("wheel", o.throttle(function(r) {
             if (t.getSignal("preventWheelPan"))
               return;
+            t.setSignal("wheelZoom", true);
             var a = r.domEvent
               , u = t.getSignal("wheelZoom");
             e || t.setCapture(!1);
