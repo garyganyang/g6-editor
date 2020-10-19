@@ -1,6 +1,6 @@
 {
   "name": "@sdsd22/sd-g6-editor",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "graph editor",
   "browser": "build/g6Editor.js",
   "main": "build/g6Editor.js",

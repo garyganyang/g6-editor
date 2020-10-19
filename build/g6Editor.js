@@ -12995,7 +12995,8 @@
                 }
                 ,
                 n._shouldDraw = function() {
-                  return t.prototype._shouldDraw.call(this) && this.linkedItemVisible()
+                  return t.prototype._shouldDraw.call(this)
+                    // && this.linkedItemVisible()
                 }
                 ,
                 n._getPoint = function(t) {
